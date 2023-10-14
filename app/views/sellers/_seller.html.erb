@@ -1,17 +1,19 @@
 <div id="<%= dom_id seller %>">
-  <p>
-    <strong>User:</strong>
-    <%= seller.user_id %>
-  </p>
-
-  <p>
-    <strong>Product:</strong>
-    <%= seller.product_id %>
-  </p>
-
-  <p>
-    <strong>Condition:</strong>
-    <%= seller.condition_id %>
-  </p>
-
+<table class="table table-bordered">
+  <thead>
+      <th scope="col"><strong>Nombre</strong></th>
+      <th scope="col"><strong>Email</strong></th>
+      <th scope="col"><strong>Telefono</strong></th>
+      <th scope="col"><strong>Categoria</strong></th>
+      <th scope="col"><strong>Acciones</strong></th>
+  </thead>  
+  <tbody>
+      <td><%= seller.user.name %></td>
+      <td><%= seller.user.email %></td>
+      <td><%= seller.user.phone %></td> 
+      <td><%= seller.product.name %></td>
+      <td><%= seller.condition.name %></td>
+      <td><%= link_to "Agregar producto", new_product_path, class: "btn btn-primary" %><%= link_to "Show this seller", seller , class: "btn btn-secondary" %></td>
+  </tbody>
+</table>
 </div>

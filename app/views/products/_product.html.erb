@@ -1,17 +1,14 @@
 <div id="<%= dom_id product %>">
-  <p>
-    <strong>Name:</strong>
-    <%= product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= product.description %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
-
+<table class="table table-bordered">
+  <thead>
+      <th scope="col"><strong>Name:</strong></th>
+      <th scope="col"><strong>Description:</strong></th>
+      <th scope="col"><strong>Price:</strong></th>
+  </thead>
+  <tbody>
+      <td scope="row"><%= product.name %></td>
+      <td scope="row"><%= product.description %></td>
+      <td scope="row"><%= product.price %></td>
+  </tbody>
+</table>
 </div>

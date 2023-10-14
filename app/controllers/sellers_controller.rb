@@ -3,7 +3,7 @@ class SellersController < ApplicationController
 
   # GET /sellers or /sellers.json
   def index
-      # @properties = Property.all
+      # @properties = Product.all
       @pagy, @sellers = pagy(Seller.all)
     end
 
@@ -13,7 +13,7 @@ class SellersController < ApplicationController
 
   # GET /sellers/new
   def new
-    @seller = Seller.new
+   @seller = current_user.sellers.build
   end
 
   # GET /sellers/1/edit
@@ -22,7 +22,7 @@ class SellersController < ApplicationController
 
   # POST /sellers or /sellers.json
   def create
-    @seller = Seller.new(seller_params)
+      @seller = current_user.sellers.build(seller_params)
 
     respond_to do |format|
       if @seller.save

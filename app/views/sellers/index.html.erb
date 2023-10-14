@@ -3,12 +3,11 @@
 <h1>Sellers</h1>
 
 <div id="sellers">
-  <% @sellers.each do |seller| %>
+
+  <% @sellers.each do |seller| %>  
     <%= render seller %>
-    <p>
-      <%= link_to "Show this seller", seller %>
-    </p>
+
   <% end %>
 </div>
 <%== pagy_bootstrap_nav(@pagy) %>
-<%= link_to "Nuevo vendedor", new_seller_path %>
+<%= link_to "Nuevo vendedor", new_seller_path, class: "btn btn-primary" %>

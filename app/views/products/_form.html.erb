@@ -1,3 +1,4 @@
+
 <%= form_with(model: product) do |form| %>
   <% if product.errors.any? %>
     <div style="color: red">
@@ -10,7 +11,9 @@
       </ul>
     </div>
   <% end %>
-
+<div class="card text-center" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
@@ -34,4 +37,6 @@
   <div>
     <%= form.submit %>
   </div>
+ </div>
+</div>
 <% end %>
