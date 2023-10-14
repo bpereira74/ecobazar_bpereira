@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :eco_products
+  resources :sellers
+  resources :products
   # Devise
   # Devise
   devise_for :users,  controllers: { registrations: 'registrations' },
