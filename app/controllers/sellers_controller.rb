@@ -4,7 +4,7 @@ class SellersController < ApplicationController
   # GET /sellers or /sellers.json
   def index
       # @properties = Property.all
-      @pagy, @seller = pagy(Seller.all)
+      @pagy, @sellers = pagy(Seller.all)
     end
 
   # GET /sellers/1 or /sellers/1.json
