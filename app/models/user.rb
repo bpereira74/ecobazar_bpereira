@@ -19,4 +19,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  # Validaciones
+  validates :name, presence: true
+  validates :phone, presence: true
+  enum role: [:regular, :admin]
 end
