@@ -11,6 +11,20 @@
   </head>
 
   <body>
+  <nav>
+  <ul>
+    <li>
+      <%= link_to "Home", root_path %>
+    </li>
+	<li>
+      <%= link_to "Políticas de privacidad", privacy_path %>
+    </li>
+<li>
+      <%= link_to "Terminos y condiciones", legal_path %>
+    </li>
+</ul>
+</nav>
+
     <%= yield %>
   </body>
 </html>
