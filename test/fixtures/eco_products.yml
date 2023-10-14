@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  description: MyText
+  condition: one
+  precio: 1
+  available: false
+
+two:
+  user: two
+  name: MyString
+  description: MyText
+  condition: two
+  precio: 1
+  available: false

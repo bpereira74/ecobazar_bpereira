@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'csv'
+puts 'Importing categories...'
+CSV.foreach(Rails.root.join('db/seeds/csv/conditions.csv'), headers: true) do |row|
+  Condition.create! do |condition|
+      condition.id = row[0]
+      condition.name = row[1]
+      condition.available = row[2]
+  end
+end
